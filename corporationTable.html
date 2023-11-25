@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>  
+        <title>Corporations</title> 
+        <style>
+            
+        table, tr, td {
+            border:2px solid green;
+            border-collapse: collapse;
+            width:40%;
+            font-family:verdana;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        h2 {
+            font-family:verdana;
+            font-size:200%;
+            text-align: center;
+            color:green;
+        }        
+        </style>
+        <script>
+        
+        function displayTable() {
+            var text = " ";
+            var i;
+            var corp = ["Apple", "Microsoft", "Alphabet (Google)", "Amazon", "NVIDIA", "Tesla", "Berkshire Hathaway", "Meta Platforms (Facebook)", "UnitedHealth Group", "Johnson & Johnson"];
+            var ceo = ["Tim Cook", "Satya Nedella", "Sundar Pichai", "Andy Jassy", "Jensen Huang", "Elon Musk", "Warren Buffet", "Mark Zuckerberg", "Andrew Witty", "Joaquin Duato"];
+            var founded = [1977, 1977, 1998, 1994, 1993, 2003, 1839, 2004, 1977, 1887];
+            var valuation = ["3.051 trillion", "2.532 trillion", "1.507 trillion", "1324 trillion", "1.008 trillion", "813.59 billion", "736.73 billion", "480.77 billion", "429.83 billion"];
+
+        text = "<table>";
+        text += "<tr><th>Name</th><th>CEO</th><th>Founded</th><th>Valuation</th></tr>";
+            for (i = 0; i < corp.length; i ++){
+                text += "<tr><td>" + corp[i] + "</td><td>" + ceo[i] + "</td><td>" + founded[i] + "</td><td>" + valuation[i] + "</td></tr>";
+            }            
+        text += "</table>";
+            document.getElementById("list").innerHTML = text;
+        }
+        </script>
+    </head>
+	<body>
+
+        <h2>The Largest US Corporations</h2>
+
+        <button onclick="displayTable()">Display</button>
+
+        <p id="list"></p>
+
+        <p>josephParrett</p>
+
+	</body>
+</html>
